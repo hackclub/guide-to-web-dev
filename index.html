@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide to Web Dev</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-header">
+      <span class="dot"></span>
+      Guide to Web Dev
+    </div>
+    <div id="nav-list" class="nav-list">
+      <p class="loading">Loading guides…</p>
+    </div>
+  </nav>
+
+  <main class="content">
+    <article id="guide-content" class="markdown-body">
+      <p class="loading">Loading…</p>
+    </article>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
