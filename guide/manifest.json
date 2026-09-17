@@ -1,0 +1,7 @@
+[
+  { "section": "Basics", "file": "01-html-basics.md", "title": "HTML Basics" },
+  { "section": "Basics", "file": "02-css-basics.md", "title": "CSS Basics" },
+  { "section": "Basics", "file": "03-javascript-basics.md", "title": "JavaScript Basics" },
+  { "section": "Going Further", "file": "04-git-and-github.md", "title": "Git & GitHub" },
+  { "section": "Going Further", "file": "05-deploying-a-site.md", "title": "Deploying a Site" }
+]

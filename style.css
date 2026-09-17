@@ -1,0 +1,209 @@
+/* Hack Club brand palette — https://hackclub.com/brand */
+:root {
+  --red: #ec3750;
+  --orange: #ff8c37;
+  --yellow: #f1c40f;
+  --green: #33d6a6;
+  --cyan: #5bc0de;
+  --blue: #338eda;
+  --purple: #a633d6;
+  --muted: #8492a6;
+  --dark: #1f2d3d;
+  --darker: #17181c;
+  --bg: #f7f7f8;
+  --panel: #ffffff;
+  --border: #e2e5e9;
+  --sidebar-w: 260px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--darker);
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  padding: 14px 20px 6px;
+}
+
+.nav-link {
+  display: block;
+  padding: 8px 20px;
+  color: #d7dbe0;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  font-size: 0.92rem;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+.nav-link.active {
+  border-left-color: var(--red);
+  background: rgba(236,55,80,0.12);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 40px 48px 80px;
+  max-width: 860px;
+}
+
+.loading { color: var(--muted); }
+
+.markdown-body h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  border-bottom: 3px solid var(--red);
+  padding-bottom: 10px;
+}
+
+.markdown-body h2 {
+  font-size: 1.4rem;
+  margin-top: 2em;
+  color: var(--dark);
+}
+
+.markdown-body h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-right: 8px;
+}
+
+.markdown-body h3 {
+  color: var(--dark);
+  margin-top: 1.6em;
+}
+
+.markdown-body a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.markdown-body a:hover { text-decoration: underline; }
+
+.markdown-body code {
+  background: #eef0f3;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdown-body pre {
+  background: var(--darker);
+  color: #f2f2f2;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown-body pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid var(--yellow);
+  margin: 1em 0;
+  padding: 4px 16px;
+  color: #4a5568;
+  background: #fffbea;
+}
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 1.4em;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown-body th, .markdown-body td {
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.markdown-body img {
+  max-width: 100%;
+}
+
+.error {
+  color: var(--red);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .content {
+    padding: 24px;
+    max-width: 100%;
+  }
+}
