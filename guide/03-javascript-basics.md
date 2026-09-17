@@ -50,7 +50,7 @@ document.getElementById("list").innerHTML = "<li>New item</li>";
 ## Fetching data
 
 ```js
-fetch("guides/manifest.json")
+fetch("guide/manifest.json")
   .then((res) => res.json())
   .then((data) => console.log(data));
 ```
